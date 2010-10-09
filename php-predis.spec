@@ -2,6 +2,10 @@
 # Conditional build:
 %bcond_without	tests		# build without tests
 
+%ifarch sparc sparc64
+%undefine	with_tests
+%endif
+
 %define		php_min_version 5.2.6
 %define		modname	predis
 %include	/usr/lib/rpm/macros.php
@@ -9,7 +13,7 @@ Summary:	Flexible and feature-complete PHP client library for Redis
 Summary(pl.UTF-8):	%{modname} -
 Name:		php-%{modname}
 Version:	0.6.1
-Release:	2
+Release:	3
 License:	BSD-like
 Group:		Development/Languages/PHP
 Source0:	http://github.com/nrk/predis/tarball/v%{version}-PHP5.2#/%{modname}.tgz
