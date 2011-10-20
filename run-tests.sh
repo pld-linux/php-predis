@@ -1,13 +1,16 @@
 #!/bin/sh
 # start redis daemon, and run tests, kill the daemon when tests are ran
 # Author: Elan Ruusamäe <glen@delfi.ee>
+# $Id$
 
-cat > redis.conf <<'EOF'
+export REDIS_SERVER_PORT=6380
+
+cat > redis.conf <<EOF
 bind 127.0.0.1
 
 daemonize no
 #pidfile redis.pid
-port 6380
+port $REDIS_SERVER_PORT
 bind 127.0.0.1
 timeout 300
 loglevel warning
