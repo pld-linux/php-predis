@@ -1,23 +1,20 @@
---- php-predis-0.6.1/test/PredisShared.php	2010-10-09 17:38:52.650508019 +0300
-+++ php-predis-0.6.1/test/PredisShared.php	2010-10-09 17:46:01.993925181 +0300
-@@ -1,9 +1,9 @@
+--- php-predis-0.6.6/test/PredisShared.php~	2011-10-20 12:45:42.000000000 +0300
++++ php-predis-0.6.6/test/PredisShared.php	2011-10-20 12:46:47.993123318 +0300
+@@ -1,7 +1,7 @@
  <?php
- require_once '../lib/Predis.php';
+ // -------------------------------------------------------------------------- //
  
--if (I_AM_AWARE_OF_THE_DESTRUCTIVE_POWER_OF_THIS_TEST_SUITE !== true) {
-+/*if (I_AM_AWARE_OF_THE_DESTRUCTIVE_POWER_OF_THIS_TEST_SUITE !== true) {
-     exit('Please set the I_AM_AWARE_OF_THE_DESTRUCTIVE_POWER_OF_THIS_TEST_SUITE constant to TRUE if you want to proceed.');
--}
-+}*/
+-define('I_AM_AWARE_OF_THE_DESTRUCTIVE_POWER_OF_THIS_TEST_SUITE', false);
++define('I_AM_AWARE_OF_THE_DESTRUCTIVE_POWER_OF_THIS_TEST_SUITE', true);
  
- if (!function_exists('array_union')) {
-     function array_union(Array $a, Array $b) { 
+ // -------------------------------------------------------------------------- //
+ 
 @@ -17,7 +17,7 @@
  
  class RC {
      const SERVER_HOST      = '127.0.0.1';
 -    const SERVER_PORT      = 6379;
-+    const SERVER_PORT      = 6380;
++    const SERVER_PORT      = 6380; // non-standard port, so shouldn't destroy
      const DEFAULT_DATABASE = 15;
  
      const WIPE_OUT         = 1;
