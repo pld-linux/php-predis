@@ -1,5 +1,5 @@
 #!/bin/sh
-# start redis daemon, and run tests, kill the daemon when tests are ran
+# start redis daemon, and run tests, kill the daemon when tests are complete
 # Author: Elan Ruusamäe <glen@delfi.ee>
 # $Id$
 
