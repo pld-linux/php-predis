@@ -3,7 +3,7 @@
 # Author: Elan Ruusamäe <glen@delfi.ee>
 # $Id$
 
-export REDIS_SERVER_PORT=6380
+export REDIS_SERVER_PORT=$((6380 + RANDOM % 10))
 
 cat > redis.conf <<EOF
 bind 127.0.0.1
