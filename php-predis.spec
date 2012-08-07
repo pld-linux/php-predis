@@ -13,7 +13,7 @@ Summary:	Flexible and feature-complete PHP client library for Redis
 Summary(pl.UTF-8):	%{modname} -
 Name:		php-%{modname}
 Version:	0.6.6
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Development/Languages/PHP
 Source0:	http://github.com/nrk/predis/tarball/v%{version}-PHP5.2#/%{modname}-%{version}.tgz
@@ -25,9 +25,9 @@ URL:		https://github.com/nrk/predis/wiki
 %{?with_tests:BuildRequires:	redis-server}
 BuildRequires:	rpmbuild(macros) >= 1.519
 BuildRequires:	sed >= 4.0
+Requires:	php(pcre)
+Requires:	php(spl)
 Requires:	php-common >= 4:%{php_min_version}
-Requires:	php-pcre
-Requires:	php-spl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
