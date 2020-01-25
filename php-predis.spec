@@ -8,7 +8,6 @@
 
 %define		php_min_version 5.2.6
 %define		modname	predis
-%include	/usr/lib/rpm/macros.php
 Summary:	Flexible and feature-complete PHP client library for Redis
 Summary(pl.UTF-8):	%{modname} -
 Name:		php-%{modname}
