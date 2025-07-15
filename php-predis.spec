@@ -37,7 +37,7 @@ Redis key-value database.
 %prep
 %setup -qc
 mv *-predis-*/* .
-%patch0 -p1
+%patch -P0 -p1
 ln -s %{SOURCE1} .
 
 %build
